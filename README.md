@@ -36,7 +36,8 @@ You will make and deploy a full-stack blog app which will allow you to write and
 - Clone the starting app from this url: TODO: create and link back-end API starter app.
 - Create a local database: TODO: link local database setup instructions
 - Create a `.env` file, locally, based on `.env.example`. This will be used to configure a `DATABASE_URL` environment variable when running locally which will tell your code where the database is that it should connect to, and what username and password it should use.
-- Run `yarn start:dev` and resolve any errors before proceeding.
+- In the terminal, run `yarn test` and ensure you see a green "PASS" indicator. Then use ctrl-c in the terminal to stop the tests.
+- In the terminal, run `yarn start:dev` and resolve any errors before proceeding.
 - Publish the project repo to github. Call it `blog-backend`. TODO: add link to instructions: "publishing new project repo to github".
 - Set up deployment of your project to heroku from github:
   - https://devcenter.heroku.com/articles/github-integration
@@ -65,6 +66,8 @@ You will make and deploy a full-stack blog app which will allow you to write and
 As a user, via the front-end app:
 
 - I should be able to create a blog post with title, and main text. (Date of creation should be automatically recorded for me.)
+  - A post's title should be able to store at least 250 characters.
+  - A post's main text should be able to store at least 10,000 characters.
 - I should be able to view a list of all created blog posts (title, creation date, and a (maximum 300-character) excerpt of the main text), in reverse chronological order.
 - I should be able to click on a blog post from the summary view and be presented with a single-record view, including the full main text.
 - I should be able to return to the list view from the single-record view
@@ -80,5 +83,3 @@ As a user, via the front-end app:
 - I should be able to add a number of comments to a blog post. My comment text and my offered name should be recorded.
 - I should be able to see all comments under a given blog post, in the single-record view for that post.
 - I should be able to delete a comment.
-
-# Ideas for more work

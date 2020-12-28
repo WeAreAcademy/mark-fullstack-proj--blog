@@ -44,9 +44,9 @@ You will make and deploy a full-stack blog app which will allow you to write and
   - In the heroku dashboard for your newly added app, go to Resources, and search for and add the "add-on" called "Heroku Postgres". (You'll want to choose the free version, if offered)
   - Once the service appears as an add-on, click on it. It should take you to the database administration part of the dashboard. (Also accessible from https://data.heroku.com/ )
   - Choose Settings: View Credentials and copy the long `URI` value. This includes your database username and password so do not store it in source control.
-  - from your laptop, ensure you can connect to the remote database by running the psql command with the URI found in the credentials in the previous step. E.g. here's how your command might look (though I have replaced the credentials):
-    `psql postgres://thisIsMyUsername:thisIsMyPassword@machinename.eu-west-1.compute.amazonaws.com:5432/databasename`
-  - you can run commands in this way to create the tables you need for you app
+  - from your laptop, ensure you can connect to the remote database by running the psql command with the URI found in the credentials in the previous step. E.g. here's the _format_ of your command - note that we have replaced the details:
+    `psql postgres://USER:PASS@HOST/DATABASENAME`
+  - Use this psql interface to run SQL commands to create the tables you need for you app
   - When your app runs on heroku, it will automatically be given an environment variable, DATABASE_URL with the necessary location and credentials for connection to your database.
 - Write the code for your blog API, starting in server.ts
 

@@ -38,7 +38,7 @@ You will make and deploy a full-stack blog app which will allow you to write and
 - Create a `.env` file, locally, based on `.env.example`. This will be used to configure a `DATABASE_URL` environment variable when running locally which will tell your code where the database is that it should connect to, and what username and password it should use.
 - In the terminal, run `yarn test` and ensure you see a green "PASS" indicator. Then use ctrl-c in the terminal to stop the tests.
 - In the terminal, run `yarn start:dev` and resolve any errors before proceeding.
-- Publish the project repo to github. Call it `blog-backend`. TODO: add link to instructions: "publishing new project repo to github".
+- Publish the project repo to github. Call it `blog-backend`.
 - Set up deployment of your project to heroku from github:
   - https://devcenter.heroku.com/articles/github-integration
 - Provision Heroku Postgres service for your app:
@@ -53,11 +53,11 @@ You will make and deploy a full-stack blog app which will allow you to write and
 
 ### Setup front-end
 
-- Create a new React app on your machine called `blog-react`. Make sure you set up with TypeScript not the JavaScript default. TODO: add link to instructions: "React project creation setup (w typescript)".
+- Create a new React app on your machine called `blog-react`. Make sure you set up with TypeScript not the JavaScript default.  See [guide to React project initial creation (with TypeScript)](https://www.notion.so/weareacademy/How-to-create-a-React-app-with-TypeScript-76643f84db564a69a04db9a0b6a2f2e7).
 
-- Publish the project repo to github. Call it `blog-react`. TODO: add link to instructions: "publishing new project repo to github".
+- Publish the project repo to github. Call it `blog-react`.
 
-- Set up continuous deployment of your app to [Netlify](https://netlify.app/) as `academy-yourgithubusername-blog`.netlify.app where `yourgithubusername` is your github username. TODO: add link to Netlify deploy instructions.
+- Set up continuous deployment of your app to [Netlify](https://netlify.app/) as `academy-yourgithubusername-blog`.netlify.app where `yourgithubusername` is your github username.  See [Netlify deployment guide for React apps](https://www.notion.so/weareacademy/How-to-deploy-a-React-app-to-free-Netlify-hosting-9e6ebd4dcb814cb483c34eb0f05ea96e).
 
 - Follow the given instructions on configuring the API base URL for local development and for production. TODO: make and link API config instructions for react app on netlify and local.
 

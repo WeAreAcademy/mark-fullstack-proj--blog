@@ -58,9 +58,9 @@ This recommended setup is not different than the earlier full-stack apps, except
 
 - Publish the project repo to github. Call it `blog-react`.
 
-- "Follow the given instructions on configuring the API base URL for local development and for production."
-
 - Set up continuous deployment of your app to [Netlify](https://netlify.app/) as `academy-yourgithubusername-blog`.netlify.app where `yourgithubusername` is your github username.  See [Netlify deployment guide for React apps](https://www.notion.so/weareacademy/How-to-deploy-a-React-app-to-free-Netlify-hosting-9e6ebd4dcb814cb483c34eb0f05ea96e).
+
+- Follow [this guide on how to configure an API base-URL in a React app for production AND development](https://www.notion.so/weareacademy/How-to-configure-an-API-base-URL-in-a-React-app-for-production-AND-development-d74af8551cb9430ba95a976f32dae360)
 
 ## Level 1
 

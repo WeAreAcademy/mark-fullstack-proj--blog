@@ -83,7 +83,23 @@ As a user, via the front-end app:
 - I should be able to filter the list view entries by text. Only those who have matching text in their title or main text should be shown. Case should be ignored.
 
 ## Level 3 - comments
+**Overview:** Add support to allow users to add, view and delete comments on a specific paste.
 
 - I should be able to add a number of comments to a blog post. My comment text and my offered name should be recorded.
 - I should be able to see all comments under a given blog post, in the single-record view for that post.
 - I should be able to delete a comment.
+- When I delete a blog post, all related comments should be deleted automatically.
+
+**API**: On the API side, we suggest you enable this functionality by providing the following routes:
+
+*  POST 'articles/:articleId/comments' to create a new comment specific to a given article.
+*  GET 'articles/:articleId/comments' to get all comments corresponding to a specific article.
+*  DELETE 'articles/:articleId/comments/:commentId' to delete a comment of a given id that belongs on a given article.
+
+These are conventional RESTful routes for "nested" resources.   You don't *have* to adhere to these conventions.  The priority is that the new functionality is made available to the user.
+
+**Database**: In the database:
+
+- Ensure that all comments always each relate to an existing article.  You should strive to make it impossible to have an 'orphaned' comment in the database, regardless of any programming mistakes that might be made in your express code.
+- Ensure that if you delete an article, all related comments are automatically deleted
+- Ensure that if you delete a comment, the related article is NOT deleted automatically!

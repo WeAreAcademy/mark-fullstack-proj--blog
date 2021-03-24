@@ -9,7 +9,7 @@ methods:
   - solo
 
 tags:
-  - wip
+  - full-stack
 ---
 
 # Academy Project: Blog
@@ -33,23 +33,24 @@ You will make and deploy a full-stack blog app which will allow you to write and
 
 ### Setup back-end
 
-- Clone the starting app from this url: TODO: create and link back-end API starter app.
-- Create a local database: TODO: link local database setup instructions
+This recommended setup is not different than the earlier full-stack apps, except we recomment you use [the github integration](https://devcenter.heroku.com/articles/github-integration) to deploy to heroku instead of the heroku cli.
+
+- Create the starting app by using this template repo: https://github.com/WeAreAcademy/mark-fullstack-proj--starter-1
+- Create a local database
 - Create a `.env` file, locally, based on `.env.example`. This will be used to configure a `DATABASE_URL` environment variable when running locally which will tell your code where the database is that it should connect to, and what username and password it should use.
-- In the terminal, run `yarn test` and ensure you see a green "PASS" indicator. Then use ctrl-c in the terminal to stop the tests.
+- In the terminal, run `yarn` to install the required packages.
 - In the terminal, run `yarn start:dev` and resolve any errors before proceeding.
-- Publish the project repo to github. Call it `blog-backend`.
+- Publish the project repo to github, call it `blog-backend`.
 - Set up deployment of your project to heroku from github:
   - https://devcenter.heroku.com/articles/github-integration
-- Provision Heroku Postgres service for your app:
+- Provision Heroku Postgres DB service for your app:
   - In the heroku dashboard for your newly added app, go to Resources, and search for and add the "add-on" called "Heroku Postgres". (You'll want to choose the free version, if offered)
   - Once the service appears as an add-on, click on it. It should take you to the database administration part of the dashboard. (Also accessible from https://data.heroku.com/ )
   - Choose Settings: View Credentials and copy the long `URI` value. This includes your database username and password so do not store it in source control.
-  - from your laptop, ensure you can connect to the remote database by running the psql command with the URI found in the credentials in the previous step. E.g. here's the _format_ of your command - note that we have replaced the details:
-    `psql postgres://USER:PASS@HOST/DATABASENAME`
-  - Use this psql interface to run SQL commands to create the tables you need for you app
+  - from your laptop, ensure you can connect to the remote database from Postico or psql using the URI found in the credentials in the previous step.  
+  - Run SQL commands to create the tables you need for you app
   - When your app runs on heroku, it will automatically be given an environment variable, DATABASE_URL with the necessary location and credentials for connection to your database.
-- Write the code for your blog API, starting in server.ts
+- Write the code for your blog API.
 
 ### Setup front-end
 
@@ -57,9 +58,9 @@ You will make and deploy a full-stack blog app which will allow you to write and
 
 - Publish the project repo to github. Call it `blog-react`.
 
-- Set up continuous deployment of your app to [Netlify](https://netlify.app/) as `academy-yourgithubusername-blog`.netlify.app where `yourgithubusername` is your github username.  See [Netlify deployment guide for React apps](https://www.notion.so/weareacademy/How-to-deploy-a-React-app-to-free-Netlify-hosting-9e6ebd4dcb814cb483c34eb0f05ea96e).
+- "Follow the given instructions on configuring the API base URL for local development and for production."
 
-- Follow the given instructions on configuring the API base URL for local development and for production. TODO: make and link API config instructions for react app on netlify and local.
+- Set up continuous deployment of your app to [Netlify](https://netlify.app/) as `academy-yourgithubusername-blog`.netlify.app where `yourgithubusername` is your github username.  See [Netlify deployment guide for React apps](https://www.notion.so/weareacademy/How-to-deploy-a-React-app-to-free-Netlify-hosting-9e6ebd4dcb814cb483c34eb0f05ea96e).
 
 ## Level 1
 
@@ -75,11 +76,14 @@ As a user, via the front-end app:
 - I should be able to edit the title or main text of any post
 - I should not be able to edit the creation time of any post
 
-## Level 2
+## Level 2 - filtering
 
 As a user, via the front-end app:
 
 - I should be able to filter the list view entries by text. Only those who have matching text in their title or main text should be shown. Case should be ignored.
+
+## Level 3 - comments
+
 - I should be able to add a number of comments to a blog post. My comment text and my offered name should be recorded.
 - I should be able to see all comments under a given blog post, in the single-record view for that post.
 - I should be able to delete a comment.

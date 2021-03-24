@@ -76,6 +76,8 @@ As a user, via the front-end app:
 - I should be able to edit the title or main text of any post
 - I should not be able to edit the creation time of any post
 
+To avoid confusion around multiple meanings of the word `post` in your code, we suggest you call your blog posts `articles` (and your database, `blog`)
+
 ## Level 2 - filtering
 
 As a user, via the front-end app:
